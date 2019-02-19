@@ -29,6 +29,11 @@ Plugin 'vale1410/vim-minizinc'
 Plugin 'tmux-plugins/vim-tmux-focus-events'
 
 Plugin 'roxma/vim-tmux-clipboard'
+
+Plugin 'justinmk/vim-syntax-extra'
+
+Plugin 'rhysd/vim-clang-format'
+
 " Also add Glaive, which is used to configure codefmt's maktaba flags. See
 " " `:help :Glaive` for usage.
 " Plugin 'google/vim-glaive'
@@ -38,10 +43,11 @@ syntax on
 
 "Sätter tab ;*
 set tabstop=4
-set shiftwidth=4
+"set shiftwidth=4
 set autoindent
 set smartindent
 set cindent
+set expandtab
 
 "visualiserar tab
 "set list
@@ -50,6 +56,7 @@ set cindent
 "Numrerar rader
 set number
 
+set ruler
 " set cursorline
 
 "För att enklare kunna kopiera till system clipboard
@@ -86,13 +93,14 @@ let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/.ycm_extra_confcp
 " Clang format
 let g:clang_format#code_style = 'llvm'
 
+colorscheme molokai
+" Spellcheck for tex
+au BufReadPost,BufNewFile *.md,*.txt,*.tex set spell spelllang=en_us
+
 let g:clang_format#style_options = {
             \ "AccessModifierOffset" : -4,
             \ "AllowShortIfStatementsOnASingleLine" : "true",
             \ "AlwaysBreakTemplateDeclarations" : "true",
-            \ "Standard" : "C++11"}
+            \ "Standard" : "C++11",
+            \ "UseTab" : "true"}
 
-
-colorscheme molokai
-" Spellcheck for tex
-au BufReadPost,BufNewFile *.md,*.txt,*.tex set spell spelllang=en_us
