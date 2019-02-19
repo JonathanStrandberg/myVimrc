@@ -29,6 +29,7 @@ Plugin 'vale1410/vim-minizinc'
 Plugin 'tmux-plugins/vim-tmux-focus-events'
 
 Plugin 'roxma/vim-tmux-clipboard'
+Plugin 'airblade/vim-gitgutter'
 " Also add Glaive, which is used to configure codefmt's maktaba flags. See
 " " `:help :Glaive` for usage.
 " Plugin 'google/vim-glaive'
@@ -96,3 +97,7 @@ let g:clang_format#style_options = {
 colorscheme molokai
 " Spellcheck for tex
 au BufReadPost,BufNewFile *.md,*.txt,*.tex set spell spelllang=en_us
+
+" Compile the current .tex-file to produce a pdf
+autocmd BufNewFile,BufRead *.tex noremap <F12> :w<Return>:!pdflatex %<Return>
+
