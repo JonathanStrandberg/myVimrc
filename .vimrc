@@ -29,15 +29,13 @@ Plugin 'vale1410/vim-minizinc'
 Plugin 'tmux-plugins/vim-tmux-focus-events'
 
 Plugin 'roxma/vim-tmux-clipboard'
-<<<<<<< HEAD
+
 Plugin 'airblade/vim-gitgutter'
-=======
 
 Plugin 'justinmk/vim-syntax-extra'
 
 Plugin 'rhysd/vim-clang-format'
 
->>>>>>> cf34435db04a296379707a23c388cd54f74e3cbd
 " Also add Glaive, which is used to configure codefmt's maktaba flags. See
 " " `:help :Glaive` for usage.
 " Plugin 'google/vim-glaive'
@@ -115,3 +113,4 @@ au BufReadPost,BufNewFile *.md,*.txt,*.tex set spell spelllang=en_us
 " Compile the current .tex-file to produce a pdf
 autocmd BufNewFile,BufRead *.tex noremap <F12> :w<Return>:!pdflatex %<Return>
 
+set encoding=utf-8
