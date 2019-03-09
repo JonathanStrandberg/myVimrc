@@ -29,6 +29,8 @@ Plugin 'tmux-plugins/vim-tmux-focus-events'
 
 Plugin 'roxma/vim-tmux-clipboard'
 
+Plugin 'airblade/vim-gitgutter'
+
 Plugin 'justinmk/vim-syntax-extra'
 
 Plugin 'rhysd/vim-clang-format'
@@ -103,6 +105,10 @@ let g:clang_format#style_options = {
             \ "Standard" : "C++11",
             \ "UseTab" : "true"}
 
-
 " Save on leaving insert mode
 autocmd InsertLeave * write
+
+" Compile the current .tex-file to produce a pdf
+autocmd BufNewFile,BufRead *.tex noremap <F12> :w<Return>:!pdflatex %<Return>
+
+set encoding=utf-8
