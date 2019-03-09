@@ -1,5 +1,4 @@
 "J .vimrc
-
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -91,7 +90,7 @@ let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/.ycm_extra_confcp
 " set clipboard+=unnamed
 "
 " Clang format
-let g:clang_format#code_style = 'llvm'
+let g:clang_format#code_style = 'chromium'
 
 colorscheme molokai
 " Spellcheck for tex
@@ -104,3 +103,6 @@ let g:clang_format#style_options = {
             \ "Standard" : "C++11",
             \ "UseTab" : "true"}
 
+
+" Save on leaving insert mode
+autocmd InsertLeave * write
